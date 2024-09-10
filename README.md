@@ -33,54 +33,6 @@ pip install auto-gptq optimum
 conda install mpi4py
 ```
 
-```
-.
-├── FAQ.md
-├── FAQ_ja.md
-├── FAQ_zh.md
-├── LICENSE
-├── NOTICE
-├── QWEN_TECHNICAL_REPORT.pdf
-├── README.md
-├── README_CN.md
-├── README_ES.md
-├── README_FR.md
-├── README_JA.md
-├── SFT
-│   ├── SFT_model.py
-│   ├── __pycache__
-│   │   └── model.cpython-310.pyc
-│   ├── city.txt
-│   ├── generate_dataset.py
-│   ├── model.py 
-│   └── train.txt
-├── Tongyi Qianwen LICENSE AGREEMENT
-├── Tongyi Qianwen RESEARCH LICENSE AGREEMENT
-├── ascend-support
-├── assets
-├── cli_demo.py
-├── dcu-support
-├── docker
-├── eval
-├── examples
-├── finetune
-├── finetune.py
-├── openai_api.py
-├── output_qwen
-├── recipes
-├── requirements.txt
-├── requirements_web_demo.txt
-├── run_gptq.py
-├── tech_memo.md
-├── tokenization_note.md
-├── tokenization_note_ja.md
-├── tokenization_note_zh.md
-├── utils.py
-└── web_demo.py
-```
-
-
-
 ## 加载1.8B-Chat-Int4模型
 
 在`Qwen`中新建文件夹`SFT`，在`SFT`中新建文件`model.py`
@@ -269,9 +221,53 @@ print('样本数量:',len(train_data))
 }]
 ```
 
-
-
 ## 微调模型，生成到output_qwen
+
+Qwen文件结构如下：
+
+```
+.
+├── FAQ.md
+├── FAQ_ja.md
+├── FAQ_zh.md
+├── LICENSE
+├── NOTICE
+├── QWEN_TECHNICAL_REPORT.pdf
+├── README.md
+├── README_CN.md
+├── README_ES.md
+├── README_FR.md
+├── README_JA.md
+├── SFT
+│   ├── SFT_model.py(下一步才会有这个文件)
+│   ├── city.txt
+│   ├── generate_dataset.py
+│   ├── model.py 
+│   └── train.txt
+├── Tongyi Qianwen LICENSE AGREEMENT
+├── Tongyi Qianwen RESEARCH LICENSE AGREEMENT
+├── ascend-support
+├── assets
+├── cli_demo.py
+├── dcu-support
+├── docker
+├── eval
+├── examples
+├── finetune
+├── finetune.py
+├── openai_api.py
+├── output_qwen
+├── recipes
+├── requirements.txt
+├── requirements_web_demo.txt
+├── run_gptq.py
+├── tech_memo.md
+├── tokenization_note.md
+├── tokenization_note_ja.md
+├── tokenization_note_zh.md
+├── utils.py
+└── web_demo.py
+```
 
 微调指令如下(根据文件的位置调整)：
 
